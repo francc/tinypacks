@@ -9,7 +9,7 @@
 //
 //  The above copyright notice and this permission notice shall be included in
 //  all copies or substantial portions of the Software.
-// 
+//
 //  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 //  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 //  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
@@ -21,13 +21,13 @@
 #ifndef TinyPostman_h
 #define TinyPostman_h
 
-#include <TinyPacks.h>
+#include "TinyPacks.h"
 
 #define TPM_MAX_RESOURCES 4
 #define TPM_MAX_PATH_LENGTH 16
 
 #define TPM_GET    0x01
-#define TPM_POST   0x02 
+#define TPM_POST   0x02
 #define TPM_PUT    0x03
 #define TPM_DELETE 0x04
 
@@ -36,7 +36,7 @@
 #define TPM_204_Changed            0x24
 #define TPM_205_Content            0x25
 #define TPM_400_Bad_Request        0x40
-#define TPM_401_Unauthorized       0x41 
+#define TPM_401_Unauthorized       0x41
 #define TPM_403_Forbidden          0x43
 #define TPM_404_Not_Found          0x44
 #define TPM_405_Method_Not_Allowed 0x45
@@ -76,7 +76,7 @@ class Postman {
             // bool subpaths;
         } resources[TPM_MAX_RESOURCES];
         uint8_t registered_resources;
-    
+
         Postman();
         bool registerResource(const char * path, Resource &resource);
         tp_length_t handlePack(uint8_t * buffer, tp_length_t length, tp_length_t max_length);

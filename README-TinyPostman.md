@@ -36,7 +36,8 @@ values as follow:
 
     path:    The path of the addressed resource encoded as an UTF-8 string.
     
-    code:    An integer value representing one of following response codes:
+    code:    An integer value representing one of the following response
+             codes:
     
                 0x21    201 Created
                 0x22    202 Deleted
