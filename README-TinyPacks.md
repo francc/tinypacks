@@ -33,7 +33,7 @@ Serialization format
 ###Specification syntax
 
     |    Alternative
-    [ ]  Repetition, zero or more elements 
+    [ ]  Repetition, zero or more elements
     [n]  Repetition, n elements
     :    Length in bits, element:length
     *    Arithmetic multiplication
@@ -93,7 +93,7 @@ Serialization examples
     ------                                      ---------
     None                                        00
     0                                           40
-    123                                         7b
+    123                                         41 7b
     4567                                        42 11 d7
     8.9                                         64 41 0e 66 66
     0.0                                         60
@@ -154,7 +154,7 @@ Code examples
       #define MAX_TEXT_LENGTH 32
       char text[MAX_TEXT_LENGTH] = "";
       bool status = false;
-      int  count = 0;  
+      int  count = 0;
 
       // Pack
       writer.setBuffer(packed_data, MAX_PACKED_DATA);
@@ -180,7 +180,7 @@ Code examples
         }
         reader.close();
       }
-     
+
       // Print unpacked data
       Serial.println("Map content:");
       Serial.print("  text: ");
@@ -191,5 +191,5 @@ Code examples
       Serial.println(count);
       Serial.println();
 
-      delay(5000);  
+      delay(5000);
     }
